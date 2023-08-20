@@ -1,15 +1,17 @@
+import { footerNav } from "./data/footer-nav";
+import { footerSocials } from "./data/footer-socials";
+import FooterSimpleCentered from "./components/footer/SimpleCentered";
+
 function App() {
   return (
     <>
-      <h1 className="text-3xl">Vite + React</h1>
-      <div className="card">
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <h1 className="text-3xl">Zuma Blocks</h1>
+      <h2>Footer</h2>
+      <FooterSimpleCentered
+        bandName="The Last Vegas"
+        nav={footerNav}
+        socials={footerSocials}
+      />
     </>
   );
 }
