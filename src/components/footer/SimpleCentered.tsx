@@ -9,7 +9,17 @@ interface Props {
   socials: Array<FooterSocial>;
 }
 
-const FooterSimpleCentered: React.FC<Props> = ({ nav, socials, bandName }) => {
+const FooterSimpleCentered: React.FC<Props> = ({
+  nav,
+  socials,
+  bandName = "Band XYZ",
+}) => {
+  if (!nav || !socials)
+    return (
+      <p className="p-10 text-center text-red-500">
+        FooterSimpleCentered requires nav and socials links
+      </p>
+    );
   return (
     <footer className="">
       <div className="px-6 py-20 mx-auto overflow-hidden max-w-7xl sm:py-24 lg:px-8">

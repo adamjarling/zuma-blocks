@@ -8,7 +8,7 @@ import {
 export type FooterSocial = {
   name: string;
   href: string;
-  icon: React.FC;
+  icon: React.FC<{ className: string }>;
 };
 
 export const footerSocials = [

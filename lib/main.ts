@@ -1,3 +1,3 @@
-import App from "../src/App";
+import FooterSimpleCentered from "../src/components/footer/SimpleCentered";
 
-export { App };
+export { FooterSimpleCentered };

@@ -1,4 +1,28 @@
-# React + TypeScript + Vite
+# Zuma Blocks
+
+Blocks which are used for building music websites.
+
+## Build in watch mode
+
+When testing an exported component from another project, run the `build` in watch mode to see live updates:
+
+```shell
+pnpm build --watch
+```
+
+## Styling
+
+To get TailwindCSS working in a consuming project, you'll need to update the project's tailwind.config.js file to include the following:
+
+```js
+module.exports = {
+  content: [..."./node_modules/zuma-blocks/dist/**/*.{js,ts,jsx,tsx}"],
+  theme: {},
+  plugins: [],
+};
+```
+
+## Setup
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
