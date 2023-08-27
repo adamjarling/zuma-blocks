@@ -1,26 +1,6 @@
 {
-  "name": "zuma-blocks",
-  "version": "0.0.0",
-  "type": "module",
-  "files": [
-    "dist"
-  ],
-  "main": "./dist/zuma-blocks.umd.cjs",
-  "module": "./dist/zuma-blocks.js",
-  "exports": {
-    ".": {
-      "import": "./dist/zuma-blocks.js",
-      "require": "./dist/zuma-blocks.umd.cjs",
-      "types": "./dist/zuma-blocks.d.ts"
-    }
-  },
-  "types": "./dist/zuma-blocks.d.ts",
-  "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
-  },
+  "author": "Adam J. Arling<aarling@gmail.com>",
+  "description": "Building block React components for music websites",
   "dependencies": {
     "eslint-plugin-react": "^7.33.2",
     "react": "^18.2.0",
@@ -42,5 +22,33 @@
     "postcss": "^8.4.28",
     "typescript": "^5.0.2",
     "vite": "^4.4.5"
-  }
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/zuma-blocks.js",
+      "require": "./dist/zuma-blocks.umd.cjs",
+      "types": "./dist/zuma-blocks.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "license": "ISC",
+  "main": "./dist/zuma-blocks.umd.cjs",
+  "module": "./dist/zuma-blocks.js",
+  "name": "zuma-blocks",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adamjarling/zuma-blocks.git"
+  },
+  "scripts": {
+    "build": "tsc && vite build",
+    "dev": "vite",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "prepublishOnly": "npm run build",
+    "preview": "vite preview"
+  },
+  "type": "module",
+  "types": "./dist/zuma-blocks.d.ts",
+  "version": "0.0.0"
 }
