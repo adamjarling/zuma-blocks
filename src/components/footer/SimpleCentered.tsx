@@ -16,7 +16,7 @@ const FooterSimpleCentered: React.FC<Props> = ({
 }) => {
   if (!nav || !socials)
     return (
-      <p className="p-10 text-center text-red-500">
+      <p className="p-10 text-center text-blue-500">
         FooterSimpleCentered requires nav and socials links
       </p>
     );

@@ -2,24 +2,43 @@
 
 Blocks which are used for building music websites.
 
-## Build in watch mode
-
-When testing an exported component from another project, run the `build` in watch mode to see live updates:
+## Usage
 
 ```shell
-pnpm build --watch
+pnpm add zuma-blocks
+# or
+npm install zuma-blocks
 ```
 
-## Styling
+### TailwindCSS
 
-To get TailwindCSS working in a consuming project, you'll need to update the project's tailwind.config.js file to include the following:
+To carry through TailwindCSS styles in a consuming project, you'll need to update the consuming project's tailwind.config.js file to include `zuma-blocks` `/dist`:
 
 ```js
 module.exports = {
-  content: [..."./node_modules/zuma-blocks/dist/**/*.{js,ts,jsx,tsx}"],
+  content: [
+    "./app/**/*.{js,ts,jsx,tsx}",
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
+    "./node_modules/zuma-blocks/dist/**/*.{js,ts,jsx,tsx}",
+  ],
   theme: {},
   plugins: [],
 };
+```
+
+## Development
+
+```shell
+
+# Start dev server
+pnpm dev
+
+# Build for production
+pnpm build
+
+# Build in watch mode (for testing in other projects)
+pnpm build --watch
 ```
 
 ## Setup
