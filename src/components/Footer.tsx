@@ -12,7 +12,7 @@ const Footer: React.FC<Props> = ({ footerNav }) => {
     <footer className="hidden w-full mt-4 mb-10 border md:block">
       <div className="grid grid-cols-5">
         {footerNav.map((item) => (
-          <a href={item.href} className="" key={item.label}>
+          <a href={item.href} className="text-white" key={item.label}>
             {item.label}
           </a>
         ))}

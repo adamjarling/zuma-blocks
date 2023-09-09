@@ -44,13 +44,15 @@ function App() {
       </div>
       <Divider />
 
-      <Section>
-        <h2>Footer</h2>
-        <FooterSimpleCentered
-          bandName="The Last Vegas"
-          nav={footerNav}
-          socials={footerSocials}
-        />
+      <Section className="bg-black">
+        <div className="container mx-auto">
+          <h2 className="text-white">Footer</h2>
+          <FooterSimpleCentered
+            bandName="The Last Vegas"
+            nav={footerNav}
+            socials={footerSocials}
+          />
+        </div>
       </Section>
       <Divider />
 
@@ -69,8 +71,8 @@ function App() {
       </Section>
       <Divider />
 
-      <Section>
-        <h2>Parallax Hero</h2>
+      <Section className="bg-black">
+        <h2 className="container mx-auto text-white">Parallax Hero</h2>
         <div className="border border-gray-200">
           <ParallaxHero
             imageUrl="https://images.unsplash.com/photo-1693520999631-6ac145c1dd15?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80"
@@ -83,9 +85,9 @@ function App() {
       </Section>
       <Divider />
 
-      <Section>
+      <Section className="bg-black">
         <div className="container mx-auto">
-          <h2>Hero Image</h2>
+          <h2 className="container mx-auto text-white">Hero Image</h2>
           <HeroImage images={heroImages} />
         </div>
       </Section>
