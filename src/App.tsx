@@ -5,10 +5,12 @@ import Divider from "./components/Divider";
 import ExternalLink from "./components/ExternalLink";
 import FooterSimpleCentered from "./components/footer/SimpleCentered";
 import HeaderSimpleCentered from "./components/header/SimpleCentered";
+import HeroImage from "./components/banner/HeroImage";
 import ParallaxHero from "./components/banner/ParallaxHero";
 import Section from "./components/Section";
 import { footerNav } from "./data/footer-nav";
 import { footerSocials } from "./data/footer-socials";
+import { heroImages } from "./data/hero-image";
 import mcLogo from "./assets/mc-logo-outline_white.png";
 import { useWindowSize } from "./hooks/use-window-size";
 
@@ -40,7 +42,6 @@ function App() {
           </p>
         </Section>
       </div>
-
       <Divider />
 
       <Section>
@@ -81,6 +82,13 @@ function App() {
         </div>
       </Section>
       <Divider />
+
+      <Section>
+        <div className="container mx-auto">
+          <h2>Hero Image</h2>
+          <HeroImage images={heroImages} />
+        </div>
+      </Section>
 
       <Section>
         <h2>Tour Dates</h2>
