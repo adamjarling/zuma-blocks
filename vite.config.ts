@@ -19,7 +19,14 @@ export default defineConfig({
     },
     sourcemap: true,
     rollupOptions: {
-      external: ["react", "react-dom", "tailwindcss"],
+      external: [
+        "@headlessui/react",
+        "@heroicons/react",
+        "react",
+        "react-dom",
+        "tailwindcss",
+        "framer-motion",
+      ],
       output: {
         globals: {
           react: "React",
