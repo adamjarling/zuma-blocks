@@ -5,9 +5,9 @@ interface DividerProps {
 
 export default function Divider({ label }: DividerProps) {
   return (
-    <div className="relative">
+    <div className="relative py-10">
       <div className="absolute inset-0 flex items-center" aria-hidden="true">
-        <div className="w-full border-t border-gray-300" />
+        <div className="w-full border-t border-gray-800" />
       </div>
       {label && (
         <div className="relative flex justify-center">

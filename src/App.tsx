@@ -18,16 +18,31 @@ function App() {
   const windowSize = useWindowSize();
 
   return (
-    <div className="">
-      <div className="container mx-auto">
-        <h1 className="mt-2 mb-10">Zuma Blocks</h1>
-      </div>
-      <Section className="bg-black">
-        <div className="container mx-auto">
-          <h2 className="text-white">Button</h2>
-        </div>
+    <div className="text-white bg-gray-950">
+      <Section className="bg-gray-900">
+        <HeaderSimpleCentered
+          altReferenceTitle="Zuma Blocks"
+          navigation={[
+            {
+              name: "Components",
+              href: "#",
+            },
+            {
+              name: "React Hooks",
+              href: "#",
+            },
+            {
+              name: "Utility Functions",
+              href: "#",
+            },
+          ]}
+          socialIcons={[]}
+        />
+      </Section>
 
-        <div className="p-10">
+      <Section className="">
+        <div className="container mx-auto">
+          <h2 className="pb-10 title">Button</h2>
           <Button href="#">Click Me</Button>
         </div>
       </Section>
@@ -35,7 +50,7 @@ function App() {
 
       <div className="container mx-auto">
         <Section>
-          <h2>External Link</h2>
+          <h2 className="title">External Link</h2>
           <p>
             This is an{" "}
             <ExternalLink href="https://google.com">outside link</ExternalLink>
@@ -44,9 +59,9 @@ function App() {
       </div>
       <Divider />
 
-      <Section className="bg-black">
+      <Section className="">
         <div className="container mx-auto">
-          <h2 className="text-white">Footer</h2>
+          <h2 className="title">Footer</h2>
           <FooterSimpleCentered
             bandName="The Last Vegas"
             nav={footerNav}
@@ -56,9 +71,9 @@ function App() {
       </Section>
       <Divider />
 
-      <Section className="bg-black">
+      <Section className="">
         <div className="container mx-auto">
-          <h2 className="text-white">Header</h2>
+          <h2 className="title">Header</h2>
         </div>
 
         <HeaderSimpleCentered
@@ -71,8 +86,8 @@ function App() {
       </Section>
       <Divider />
 
-      <Section className="bg-black">
-        <h2 className="container mx-auto text-white">Parallax Hero</h2>
+      <Section className="">
+        <h2 className="container mx-auto title">Parallax Hero</h2>
         <div className="border border-gray-200">
           <ParallaxHero
             imageUrl="https://images.unsplash.com/photo-1693520999631-6ac145c1dd15?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80"
@@ -85,24 +100,28 @@ function App() {
       </Section>
       <Divider />
 
-      <Section className="bg-black">
+      <Section className="">
         <div className="container mx-auto">
-          <h2 className="container mx-auto text-white">Hero Image</h2>
+          <h2 className="container mx-auto title">Hero Image (responsive)</h2>
           <HeroImage images={heroImages} />
         </div>
       </Section>
 
       <Section>
-        <h2>Tour Dates</h2>
+        <div className="container mx-auto">
+          <h2 className="title">Tour Dates</h2>
+        </div>
       </Section>
       <Divider />
 
       <Section>
-        <h2>useWindowSize()</h2>
-        <p>Hook to determine window size</p>
-        <p>
-          Window width: {windowSize[0]} and height: {windowSize[1]}
-        </p>
+        <div className="container mx-auto">
+          <h2>useWindowSize()</h2>
+          <p>Hook to determine window size</p>
+          <p>
+            Window width: {windowSize[0]} and height: {windowSize[1]}
+          </p>
+        </div>
       </Section>
       <Divider />
     </div>

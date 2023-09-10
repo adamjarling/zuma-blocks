@@ -19,11 +19,11 @@ interface Props {
 }
 
 export default function HeaderSimpleCentered({
-  altReferenceTitle,
+  altReferenceTitle = "",
   classNames,
   logo,
-  navigation,
-  socialIcons,
+  navigation = [],
+  socialIcons = [],
 }: Props) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 

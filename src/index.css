@@ -13,4 +13,8 @@
   a {
     @apply text-blue-500;
   }
+
+  .title {
+    @apply pb-10;
+  }
 }
