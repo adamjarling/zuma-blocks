@@ -6,6 +6,9 @@ interface Props {
   altReferenceTitle: string;
   classNames?: string;
   logo?: string;
+  mobile?: {
+    bgOverlay?: string;
+  };
   navigation: Array<{
     name: string;
     href: string;
@@ -21,6 +24,7 @@ export default function HeaderSimpleCentered({
   altReferenceTitle = "",
   classNames,
   logo,
+  mobile,
   navigation = [],
   socialIcons = [],
 }: Props) {
@@ -55,10 +59,14 @@ export default function HeaderSimpleCentered({
             </button>
           </div>
         </div>
-        <a href="#" className="-m-1.5 p-1.5 text-white">
+        <a href="/" className="-m-1.5 p-1.5 text-white">
           <span className="sr-only">{altReferenceTitle}</span>
           {logo ? (
-            <img className="w-auto h-20" src={logo} alt={altReferenceTitle} />
+            <img
+              className="w-auto h-16 md:h-20"
+              src={logo}
+              alt={altReferenceTitle}
+            />
           ) : (
             <span>{altReferenceTitle}</span>
           )}
@@ -98,7 +106,11 @@ export default function HeaderSimpleCentered({
             <div>
               <div className="fixed inset-0 z-10 " />
               {/* Mobile menu overlay, show/hide based on mobile menu state. Black by default */}
-              <Dialog.Panel className="fixed inset-y-0 left-0 z-10 w-full px-6 py-6 overflow-y-auto bg-black">
+              <Dialog.Panel
+                className={`fixed inset-y-0 left-0 z-30 w-full px-6 py-6 overflow-y-auto ${
+                  mobile?.bgOverlay || "bg-black"
+                }`}
+              >
                 <div className="flex items-center justify-between">
                   <div className="flex flex-1">
                     <button
@@ -110,11 +122,11 @@ export default function HeaderSimpleCentered({
                       <XMarkIcon className="w-6 h-6" aria-hidden="true" />
                     </button>
                   </div>
-                  <a href="#" className="-m-1.5 p-1.5 text-gray-50">
+                  <a href="/" className="-m-1.5 p-1.5 text-gray-50">
                     <span className="sr-only">{altReferenceTitle}</span>
                     {logo ? (
                       <img
-                        className="w-auto h-20"
+                        className="w-auto h-16 md:h-20"
                         src={logo}
                         alt={altReferenceTitle}
                       />
