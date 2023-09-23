@@ -46,6 +46,7 @@
   },
   "scripts": {
     "build": "tsc && vite build",
+    "build:watch": "tsc && vite build --watch",
     "dev": "vite",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "prepublishOnly": "npm run build",

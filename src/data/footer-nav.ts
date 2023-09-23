@@ -8,6 +8,4 @@ export const footerNav: Array<FooterNav> = [
   { name: "Blog", href: "#" },
   { name: "Jobs", href: "#" },
   { name: "Press", href: "#" },
-  { name: "Accessibility", href: "#" },
-  { name: "Partners", href: "#" },
 ];

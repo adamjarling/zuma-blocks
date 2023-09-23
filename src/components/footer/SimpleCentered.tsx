@@ -5,14 +5,16 @@ const year = new Date().getFullYear();
 
 interface Props {
   bandName: string;
+  className?: string;
   nav: Array<FooterNav>;
   socials: Array<FooterSocial>;
 }
 
 const FooterSimpleCentered: React.FC<Props> = ({
-  nav,
-  socials,
   bandName = "Band XYZ",
+  className = "",
+  nav = [],
+  socials = [],
 }) => {
   if (!nav || !socials)
     return (
@@ -21,7 +23,7 @@ const FooterSimpleCentered: React.FC<Props> = ({
       </p>
     );
   return (
-    <footer className="text-white">
+    <footer className={`text-white ${className}`}>
       <div className="px-6 py-20 mx-auto overflow-hidden max-w-7xl sm:py-24 lg:px-8">
         <nav
           className="-mb-6 columns-2 sm:flex sm:justify-center sm:space-x-12"
